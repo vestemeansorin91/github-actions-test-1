@@ -1,0 +1,31 @@
+name: Sorin
+age: 28
+address: 'something: dsa'
+active: true
+key:
+    key: value
+    key2: 33
+    key3:
+        key4: value
+        val: rino
+jsonObject:
+    key: value
+    key2: 33
+    key3:
+        something: 33
+array:
+    - item2
+    - item3
+    -
+        key: value
+jsonArray:
+    - item1
+    - item2
+objectArray:
+    -
+        key: value
+        key2: test
+    -
+        key: value
+longText: "odqwnfiowqn eiqw ioen qowie qowierqw  qdwond oqwin dqwnd oiqnwd qdwond\ndq wpdnq owindoi qwd\n"
+longText2: "doiwqnfoiqnw oidnqoiw dnoiq wndi q\ndqwofn ewoifnqeoi ndw qwddqwo idnq\ndqwno idnqoiw ndqiown\n"
