@@ -2,10 +2,10 @@ name: Shell Commands
 
 on: [push]
 
-jobs: 
-  run-shell-command: 
+jobs:
+  run-shell-command:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: echoa a string
         run: echo "Hello World"
       - name: multiline script
@@ -15,5 +15,6 @@ jobs:
       - name: python Commands
       - run: |
           import platform
-          print(platform.processor())
+          print
+          (platform.processor())
         shell: python
