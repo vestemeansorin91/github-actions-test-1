@@ -5,6 +5,7 @@ active: true
 key:
     key: value
     key2: 33
+    key4: 54g4
     key3:
         key4: value
         val: rino
