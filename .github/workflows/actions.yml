@@ -1,19 +1,49 @@
 name: Actions Workflow
 
 on: 
-  # push: 
-  repository_dispatch: 
-    types:
-      - build
-  schedule:
-    - cron: "0/5 * * * *"
-    - cron: "0/6 * * * *"
-  pull_request:
-    types: 
-      - closed
-      - opened
-      - assigned
-      - reopened
+  push: 
+    branches:
+      - master
+      - 'feature/*' # matches feature/featureA, feature/featureB
+      - 'feature/**' #feature/feat/featureA
+
+      ## Exclude branch (inclusive the above examples)
+      - '!feature/featC'
+    tags:
+      - v1.*
+    paths:
+      - '**.js' ## Run only when you push .js files
+      - '!filename.js'
+
+  ## Can't be used with branches
+    # branches-ignore:
+    #   - something
+
+  ## Can't be used with tags
+    # tags-ignore:
+    # - v1.*
+
+  ## Can't be used with paths
+    # paths-ignore:
+    #   - "docs/**"
+
+  ## Run on POST request to https://api.github.com/repos/vestemeansorin91/github-actions-test-1/dispatches
+  # repository_dispatch: 
+  #   types:
+  #     - build
+
+  ## Schedule 
+  # schedule:
+  #   - cron: "0/5 * * * *"
+  #   - cron: "0/6 * * * *"
+
+  ## Run on pull request
+  # pull_request:
+  #   types: 
+  #     - closed
+  #     - opened
+  #     - assigned
+  #     - reopened
 
 jobs:
   run-github-actions:
