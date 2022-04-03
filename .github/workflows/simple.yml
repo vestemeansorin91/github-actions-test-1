@@ -11,13 +11,15 @@ on:
       - opened
       - assigned
       - reopened
-
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
+    timeout-minutes: 1
     steps:
       - name: echoa a string
         run: echo "Hello World"
+        timeout-minutes: 1 
+        continue-on-error: true
       - name: multiline script
         run: |
           node -v
